@@ -8,12 +8,16 @@
     <link href="assets/css/style.css" rel="stylesheet">
   
     <?php
-        include_once 'cnx.php';
-        $page = 'Home';
-        include_once './elements/header.php';
-        include_once './controllers/login.php';
-        include_once './controllers/signin.php';
-        
+       include_once 'cnx.php';
+       $page = 'Home';
+       
+       include_once './controllers/login.php';
+       include_once './controllers/signin.php';
+       include_once "./controllers/categorie.php";
+       include_once "./controllers/addtocart.php";
+       include_once "./controllers/deletefromcart.php";
+       include_once './elements/header.php';
+       
     ?>
     <title>Ecom</title>
 </head>
@@ -24,10 +28,6 @@
     <div id="root" align="center">
     </div>
     <div align='center' id="ro">
-        <?php 
-        include_once "./controllers/categorie.php";
-        include_once "./controllers/addtocart.php";
-        ?>
       
     </div>
     

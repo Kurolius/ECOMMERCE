@@ -11,10 +11,12 @@
     <?php
         include_once 'cnx.php';
         $page = 'Home';
-        include_once './elements/header.php';
         include_once './controllers/login.php';
         include_once './controllers/signin.php';
-        
+        include_once "./controllers/products.php";
+        include_once "./controllers/addtocart.php";
+        include_once "./controllers/deletefromcart.php";
+        include_once './elements/header.php';
     ?>
     <title>Ecom</title>
 </head>
@@ -25,10 +27,6 @@
     <div id="root" align="center">
     </div>
     <div align='center' id="ro">
-        <?php 
-        include_once "./controllers/products.php";
-        include_once "./controllers/addtocart.php";
-        ?>
       
     </div>
     
@@ -105,6 +103,7 @@
         
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="./assets/js/scripts.js"></script>
     </body>
