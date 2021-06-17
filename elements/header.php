@@ -4,12 +4,28 @@
         $cart = $panier->rowCount();
     }
 ?>
+<nav class="uk-navbar-container uk-margin-bottom " uk-navbar="mode: click">
 
-<nav class="navbar navbar-dark bg-primary">
-<div class="uk-navbar-left">    
+        <div class="uk-navbar-left">
+            <div>
                 <ul class="uk-navbar-nav">
-                    <li id='home' class="uk-active"><a type="button" onclick="home()">Home</a></li>
-                    <li id='Categorie'><a type="button" onclick="about()">Categorie</a></li>
+                    <li id='home' class="uk-active"><a type="button" href="index.php">Home</a></li>
+                    <li id='Categorie'>
+                    <a type="button" onclick="about()">Categorie</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li>
+                                <?php
+                                    $cat = $bdd->query('SELECT * FROM categorie');
+                                    while($c=$cat->fetch()){
+                                        echo '<a href="categorie.php?cat='.$c['id'].'">'.$c['name'].'</a>';
+                                    }
+                                ?>
+                                
+                            </li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -35,4 +51,7 @@
                 <?php }?>
                 </ul>
             </div>
+        </div>
+
+
 </nav>

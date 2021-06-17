@@ -24,7 +24,7 @@ function home(){
     document.getElementById('home').classList.add('uk-active')
 }
 function about(){
-    document.getElementById('root').innerHTML='<h3>About</h3>'
+    document.getElementById('root').innerHTML=''
     document.getElementById('ro').style.display='none'
     document.getElementById('sign').classList.remove('uk-active')
     document.getElementById('log').classList.remove('uk-active')
